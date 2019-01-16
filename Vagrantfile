@@ -6,6 +6,7 @@ Vagrant.configure("2") do |config|
 
 	config.vm.synced_folder "../pronto", "/home/vagrant/pronto", create: true, owner: "www-data", group: "www-data"
 	config.vm.synced_folder "../pronto-template", "/home/vagrant/pronto-template", create: true, owner: "www-data", group: "www-data"
+	config.vm.synced_folder "../pronto-export", "/home/vagrant/pronto-export", create: true, owner: "www-data", group: "www-data"
 
 	config.vm.provision "shell" do |s|
 		s.path = "./setup.sh"
